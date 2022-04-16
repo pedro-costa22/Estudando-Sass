@@ -1,0 +1,47 @@
+
+.pai {
+    color :red;
+}
+
+.filho {
+    @extend .pai;
+    background: black;
+}
+
+
+.erro {
+   @extend .filho;
+}
+
+$cor: yellow;
+
+@if($cor == green) {
+    p{
+        color: $cor;
+    }
+}@else if($cor == red){
+    p{
+        color: $cor;
+    }
+}@else{
+    p{
+        color: black;
+    }
+}
+
+@mixin tema($tema:padrao){
+    @if($tema == natal){
+        background: red;
+        color: white;
+    }@else if($tema == blackfriday){
+        background: black;
+        color: white;
+    }@else {
+        background: white;
+        color: black;
+    }
+}
+
+body {
+    @include tema(blackfriday);
+}

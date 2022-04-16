@@ -1,0 +1,24 @@
+/*Multiplas diretivas */
+.classe1 {
+    color :red;
+}
+
+.classe2 {
+    background: black;
+}
+
+
+.vermelho {
+    @extend .classe1;
+    @extend .classe2;
+}
+
+/*saida CSS 
+.classe1, .vermelho {
+  color: red;
+}
+
+.classe2, .vermelho {
+  background: black;
+}
+*/

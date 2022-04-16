@@ -1,0 +1,83 @@
+/* Aninhamento em SCSS/SASS */
+
+// Modo tradicional (USANDO CSS PURO)
+
+#conteudo {
+    background: #ccc;
+    padding: 15px;
+}
+
+#conteudo h1 {
+    color: #000;
+}
+
+#conteudo a{
+    color: red;
+}
+
+#conteudo a:hover{
+    color: #fff;
+}
+
+// Usando Anhinhamento em SASS (USANDO CSS PURO)
+
+#conteudo {
+    background: #ccc;
+    padding: 15px;
+
+    h1{
+        color: #000;
+    }
+
+    a{
+        color: red;
+        &:hover {    // estado hover aplicado no elemento PAI "a", equivale ao metodo da linha 39.
+            color: #fff;
+        }
+    }
+
+    /*  a:hover {   //metodo normal
+        color: #fff;
+    }  */
+}
+
+
+/* Saidas no CSS
+ Aninhamento em SCSS/SASS 
+#conteudo {
+    background: #ccc;
+    padding: 15px;
+  }
+  
+  #conteudo h1 {
+    color: #000;
+  }
+  
+  #conteudo a {
+    color: red;
+  }
+  
+  #conteudo a:hover {
+    color: #fff;
+  }
+  
+  #conteudo {
+    background: #ccc;
+    padding: 15px;
+    a:hover {   //metodo normal
+        color: #fff;
+    }  
+  }
+  #conteudo h1 {
+    color: #000;
+  }
+  #conteudo a {
+    color: red;
+  }
+  #conteudo a:hover {
+    color: #fff;
+  } 
+
+  */
+
+

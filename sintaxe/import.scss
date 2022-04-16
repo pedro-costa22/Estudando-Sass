@@ -1,0 +1,16 @@
+@import "./importVar.scss";
+
+h1{
+    $cor-titutlo: #fff; //Variavel de escopo local (Usando !global a variavel recebe uma elevação)
+    color: $cor-titutlo;
+    color: $tamanho-titulo;
+}
+
+//Saida css
+
+/*
+h1 {
+  color: #fff;
+  color: 20px;
+}
+*/

@@ -1,0 +1,11 @@
+/*Usando function em Sass */
+@use "sass:math";
+
+$total: 12;
+
+@function largura-coluna($coluna){
+    @return math.div($coluna, $total);
+}
+
+$resultado: largura-coluna(6)
+

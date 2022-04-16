@@ -1,0 +1,21 @@
+/* -- Utilizando variaveis em Sass --- */
+
+$variavel: valor;
+
+$cor-titutlo: red;
+$tamanho-titulo: 20px; //Variavel de escopo global
+
+
+h1{
+    $cor-titutlo: #fff; //Variavel de escopo local (Usando !global a variavel recebe uma elevação)
+    color: $cor-titutlo;
+    color: $tamanho-titulo;
+}
+
+/* saida no CSS 
+h1 {
+  color: #fff;
+  color: 20px;
+}
+*/
+

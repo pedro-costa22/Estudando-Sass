@@ -1,0 +1,8 @@
+/*Interpolação usando Sass */
+
+$classe: red;
+$color: color;
+
+.#{$classe} {
+    #{$color}: $classe;
+}

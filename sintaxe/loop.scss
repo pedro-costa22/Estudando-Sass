@@ -1,0 +1,80 @@
+/*------- Utilizando FOR  em Sass ------- */
+
+@for $i from 1 through 3 {  //through Define até onde vai até executação incluindo o valor final, ou seja vai executar 1, 2 e 3!
+    .class-#{$i}{
+        background: green;
+        margin-bottom: 10px;
+    }
+}
+
+//Nesse exemplo será aplicado a formatação em todas as classes de nome "Class-numero".
+
+@for $i from 1 to 3 {  //to Define até onde vai até executação incluindo porém não inclui o valor final, ou seja vai executar 1 e 2!
+    .class-#{$i}{
+        background: green;
+        margin-bottom: 10px;
+    }
+}
+
+
+/*------- Utilizando While  em Sass ------- */
+
+$contador: 1;
+
+@while ($contador < 5) {
+    .item-#{$contador}{
+        background: green;
+        margin-bottom: 10px;
+    }
+
+    $contador: $contador + 1;
+}
+
+/* Saida CSS 
+------- Utilizando FOR  em Sass ------- 
+.class-1 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .class-2 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .class-3 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .class-1 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .class-2 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+------- Utilizando While  em Sass ------- 
+  .item-1 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .item-2 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .item-3 {
+    background: green;
+    margin-bottom: 10px;
+  }
+  
+  .item-4 {
+    background: green;
+    margin-bottom: 10px;
+  } 
+  */
